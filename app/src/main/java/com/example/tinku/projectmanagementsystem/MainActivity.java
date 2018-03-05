@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.e(TAG, "Google sign in failed", e);
                 // [START_EXCLUDE]
                 updateUI(null);
-                // [END_EXCLUDE]
+                // [END_EXCLUDE
             }
         }
     }
