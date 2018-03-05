@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "627756921795",
+    "firebase_url": "https://project-management-syste-78451.firebaseio.com",
+    "project_id": "project-management-syste-78451",
+    "storage_bucket": "project-management-syste-78451.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627756921795:android:f54a0469d17df5a4",
+        "android_client_info": {
+          "package_name": "com.example.tinku.projectmanagementsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627756921795-35ib3ejtvak41l5dud25k1hmbte43cb5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tinku.projectmanagementsystem",
+            "certificate_hash": "c35290d67e036d5b7962c5fa2fc4d74c5cea7801"
+          }
+        },
+        {
+          "client_id": "627756921795-9ie9ai8e7ukgpo1c2cq06b1b2r5bj17g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9iOH1liuKZh9LcB7CAWY5cBirQQcefaE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627756921795-9ie9ai8e7ukgpo1c2cq06b1b2r5bj17g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
