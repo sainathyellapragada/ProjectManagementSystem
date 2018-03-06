@@ -1,15 +1,16 @@
-package com.example.tinku.projectmanagementsystem;
+package com.example.tinku.projectmanagementsystem.ui;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.tinku.projectmanagementsystem.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -24,8 +25,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+public class AdminLoginActivity extends AppCompatActivity  implements View.OnClickListener{
     private static final String TAG = "GoogleActivity";
     private static final int RC_SIGN_IN = 9001;
 
@@ -38,15 +39,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_admin_login);
         googleSIgnInButton = findViewById(R.id.sign_in_button);
 
 
         findViewById(R.id.sign_out_button).setOnClickListener(this);
         findViewById(R.id.disconnect_button).setOnClickListener(this);
 
-        googleSIgnInButton.setOnClickListener(this);
+        googleSIgnInButton.setOnClickListener( this);
 
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -141,13 +141,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
-                            Toast.makeText(MainActivity.this, "Succesfully Logged in", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(MainActivity.this, AdminMainScreen.class);
+                            Toast.makeText(AdminLoginActivity.this, "Succesfully Logged in", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(AdminLoginActivity.this, AdminActivity.class);
                             startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.e(TAG, "signInWithCredential:failure", task.getException());
-                            Toast.makeText(MainActivity.this, "Not Sucessfullly logged in", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdminLoginActivity.this, "Not Sucessfullly logged in", Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }
 

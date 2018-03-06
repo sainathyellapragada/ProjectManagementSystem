@@ -11,4 +11,5 @@
     <string name="tab_text_5">CREATE USERS</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="taskList">Task List</string>
 </resources>

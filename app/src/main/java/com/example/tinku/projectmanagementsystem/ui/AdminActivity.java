@@ -1,6 +1,5 @@
-package com.example.tinku.projectmanagementsystem;
+package com.example.tinku.projectmanagementsystem.ui;
 
-import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -9,35 +8,32 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.tinku.projectmanagementsystem.R;
 import com.example.tinku.projectmanagementsystem.tabs.TabAllTasks;
 import com.example.tinku.projectmanagementsystem.tabs.TabCreateProjects;
 import com.example.tinku.projectmanagementsystem.tabs.TabCreateUsers;
 import com.example.tinku.projectmanagementsystem.tabs.TabEmployeeList;
 import com.example.tinku.projectmanagementsystem.tabs.TabProjects;
 
-import static android.support.design.widget.TabLayout.TabLayoutOnPageChangeListener;
-import static android.support.design.widget.TabLayout.ViewPagerOnTabSelectedListener;
-
-public class AdminMainScreen extends AppCompatActivity {
-
-    private SectionsPagerAdapter mSectionsPagerAdapter;
+public class AdminActivity extends AppCompatActivity {
+    private AdminActivity.SectionsPagerAdapter mSectionsPagerAdapter;
 
     private ViewPager mViewPager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_main_screen);
+        setContentView(R.layout.activity_admin);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the four
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter = new AdminActivity.SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
@@ -70,8 +66,8 @@ public class AdminMainScreen extends AppCompatActivity {
 //            }
 //        });
 
-        mViewPager.addOnPageChangeListener(new TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.addOnTabSelectedListener(new ViewPagerOnTabSelectedListener(mViewPager));
+        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

@@ -7,6 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.tinku.projectmanagementsystem.R;
+import com.example.tinku.projectmanagementsystem.fragment.UserFragmentSwitch;
+import com.example.tinku.projectmanagementsystem.model.Task;
+
 import java.util.List;
 
 /**

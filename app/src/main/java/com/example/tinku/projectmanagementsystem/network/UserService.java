@@ -1,5 +1,10 @@
 package com.example.tinku.projectmanagementsystem.network;
 
+import com.example.tinku.projectmanagementsystem.model.DetailResponse;
+import com.example.tinku.projectmanagementsystem.model.ForgotResponse;
+import com.example.tinku.projectmanagementsystem.model.TaskResponse;
+import com.example.tinku.projectmanagementsystem.model.UserInfo;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -19,5 +24,5 @@ public interface UserService {
     public Call<TaskResponse> getTaskList(@Query("user_id") String user_id);
 
     @GET("pms_view_task_deatil.php")
-    public Call<DetailResponse> getTaskDetail(@Query("taskid") String taskid,@Query("project_id") String productid);
+    public Call<DetailResponse> getTaskDetail(@Query("taskid") String taskid, @Query("project_id") String productid);
 }
